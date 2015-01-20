@@ -1,0 +1,8 @@
+body {
+	background-color: #404040;
+}
+h1 a {
+	background: url(../../img/logo/storms/logo-storms-branca.png) 0 0 no-repeat !important;
+	height: 56px !important;
+	width: 217px !important;
+}

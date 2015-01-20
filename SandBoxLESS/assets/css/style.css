@@ -1,0 +1,193 @@
+/*
+ * ============= CABECALHO =============
+ */
+
+/* Ajustes do Cabecalho */
+.header {
+	padding: 15px 15px 5px;
+}
+.header-brand {
+	padding-top: 15px;
+	display: block;
+}
+.header-brand img {
+	width: 100%;
+
+	/* Bug do FF: http://stackoverflow.com/questions/17208966/image-is-being-cut-off-on-resizing-in-firefox */
+	image-rendering: optimizeQuality;
+}
+
+/*
+ * ============= MENU =============
+ */
+
+/* Ajuste pontual no nav */
+.navbar {
+	min-height: 40px;
+	text-align: center;
+	margin-bottom: 0; /* Tira a margem entre o menu e o conteudo */
+}
+.navbar .navbar-form .input-sm,
+.navbar .navbar-form .btn-sm,
+.navbar .navbar-form .btn-group-sm > .btn {
+    height: 25px;
+}
+.navbar .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Texto que aparece no botao de expandir menu, para mobile */
+.colapsed-menu-btn-title {
+    margin-left: 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Botao e expandir menu */
+.navbar-toggle {
+	margin-bottom: 0;
+    margin-top: 1px;
+}
+
+/* Ajuste do header no Menu */
+.navbar-brand {
+    height: auto;
+    display: block;
+    padding: 7px 15px;
+}
+.navbar-brand .brand {
+    height: 26px;
+	/* width: 26px; */
+}
+
+/* Customizacao de cores do nav */
+.navbar-default {
+    background-color: #008CBA;
+
+    /* Blue Gradient */
+    background-image: -webkit-linear-gradient(center bottom , #009ED2 0%, #008CBA 100%); /* For Safari 5.1 to 6.0 */
+    background-image: -o-linear-gradient(center top , #009ED2 0%, #008CBA 100%); /* For Opera 11.1 to 12.0 */
+    background-image: -moz-linear-gradient(center top , #009ED2 0%, #008CBA 100%); /* For Firefox 3.6 to 15 */
+    background-image: linear-gradient(to center top , #009ED2 0%, #008CBA 100%); /* Standard syntax */
+
+    background-repeat: repeat-x;
+    border-radius: 0;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    /* font-weight: bold; */
+}
+
+/* Para deixar o espaco entre o menu e o campo igual ao outro lado do menu */
+.navbar-form {
+    padding: 0;
+}
+/* Alinhamento do botao do campo da busca */
+.navbar .navbar-form .btn-sm,
+.navbar .navbar-form .btn-group-sm > .btn {
+	padding: 0 10px;
+}
+
+/* Ajuste do campo de busca no Menu */
+@media (min-width: 768px){
+    .nav-secondary {
+        max-width: 185px;
+    }
+    .navbar-form {
+        margin: 7px 0;
+    }
+}
+
+/* 
+ * ============= MENU MULTI LEVEL BOOTSTRAP =============
+ */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/*
+ * ============= RODAPE =============
+ */
+
+/* Rodape com fundo escuro e logo da Storms */
+#page-footer {
+    padding-top: 20px;
+    color: #FFFFFF;
+    background-color: #808080;
+}
+#page-footer p {
+	color: #FFFFFF;
+    text-align: center;
+}
+#page-footer .logo-storms {
+    text-align: center;
+}
+/* Customizacao de cores do footer */
+#page-footer {
+    background-color: #008CBA;
+
+    /* Blue Gradient */
+    background-image: -webkit-linear-gradient(center bottom , #009ED2 0%, #008CBA 100%); /* For Safari 5.1 to 6.0 */
+    background-image: -o-linear-gradient(center top , #009ED2 0%, #008CBA 100%); /* For Opera 11.1 to 12.0 */
+    background-image: -moz-linear-gradient(center top , #009ED2 0%, #008CBA 100%); /* For Firefox 3.6 to 15 */
+    background-image: linear-gradient(to center top , #009ED2 0%, #008CBA 100%); /* Standard syntax */
+
+    background-repeat: repeat-x;
+    border-radius: 0;
+    color: #FFFFFF;
+}
+
+/*
+ * ============= BREADCRUMB =============
+ */
+
+/* Adiciona o efeito de .active no ultimo elemento sem a necessidade de adicionar a class */
+.breadcrumb > li + li:last-child {
+    color: #999999;
+}

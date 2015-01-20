@@ -1,0 +1,51 @@
+
+/**
+ * Bootstrap 3 media-queries
+ * @media(max-width:767px){}  // Extra small devices (phones, less than 768px)
+ * @media(min-width:768px){}  // Small devices (tablets, 768px and up)
+ * @media(min-width:992px){}  // Medium devices (desktops, 992px and up)
+ * @media(min-width:1200px){} // Large devices (large desktops, 1200px and up)
+ */
+
+body {
+    font-size: 12px;
+}
+
+/**
+ * Fixes and other re-usables styles
+ */
+
+/* Fix para o main-container ocupar toda a tela */
+#wrap {
+    height: 100%;
+    min-height: 100%;
+}
+#main-container, #sidebar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/**
+ * Classes CSS reutilizaveis
+ */
+
+/* Box-sizing resets
+ *
+ * Reset individual elements or override regions to avoid conflicts due to
+ * global box model settings of Bootstrap.
+ */
+.reset-box-sizing,
+.reset-box-sizing *,
+.reset-box-sizing *:before,
+.reset-box-sizing *:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+/* Sombra na parte externa de um elemento */
+.sombreado {
+	-moz-box-shadow: 0px 0px 19px -3px #000000;
+	-webkit-box-shadow: 0px 0px 19px -3px #000000;
+	 box-shadow: 0px 0px 19px -3px #000000;
+}
