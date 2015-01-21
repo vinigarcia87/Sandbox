@@ -1,0 +1,22 @@
+{
+	"oAria": {
+        "sSortAscending": " - Clique para ordernar crescente",
+		"sSortDescending": " - Clique para ordernar decrescente"
+	},
+	"oPaginate": {
+        "sFirst": "Primeira",
+		"sLast": "Última",
+		"sNext": "Próxima",
+		"sPrevious": "Anterior"
+    },
+	"sEmptyTable": "Nenhum registro disponível nesta tabela",
+	"sInfo": "Total de _TOTAL_ registros",
+	"sInfoEmpty": "Nenhum registro para exibir",
+	"sInfoFiltered": "",
+	"sInfoThousands": ".",
+	"sLengthMenu": "_MENU_ resultados por página",
+	"sLoadingRecords": "Aguarde - carregando...",
+	"sProcessing": "Processando",
+	"sSearch": "Procurar por:",
+	"sZeroRecords": "Nenhum registro encontrado!"
+}

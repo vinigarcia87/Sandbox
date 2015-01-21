@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background-color:#F0F0F0;}
+
+#totalTopo {background:#CCC; width: 800px; height:60px; font: 12px/12px Arial, Helvetica, sans-serif; border:1px solid #000;}
+#totalTopo select{font: 12px/12px Arial, Helvetica, sans-serif;}
+
+.labelAno { width:60px; float:left; margin:5px 10px 5px 10px;}
+.labelSemestre { width:60px; float:left; margin:5px 10px 5px 10px;}
+.labelEscola { width:300px; float:left; margin:5px 10px 5px 10px;}
+.labelCurso { width:300px; float:left; margin:5px 10px 5px 10px;}
+
+#bread {font: 12px/12px Arial, Helvetica, sans-serif; color:#600; text-decoration:none; font-weight:bold; margin:20px 0 0 0 ;}
+#bread a {font: 12px/12px Arial, Helvetica, sans-serif; color:#600; text-decoration:none; font-weight:bold;}
+
+#totalImagens{ width:2000px; float:left;}
+#imagem1 { margin:10px 0 0 0;}
+#imagem2 { margin:30px 20px 0 0; float:left; display:inline-block;}
+#imagem5 {margin:30px 20px 0 0; float:left; display:inline-block;}
+
+#imagem3 { margin:30px 20px 0 0; float:left; display:inline-block;}
+#imagem6 {margin:30px 20px 0 0; float:left; display:inline-block;}
+
+#imagem4 { margin:30px 20px 0 0; float:left; display:inline-block;}
+#imagem7 {margin:30px 20px 0 0; float:left; display:inline-block;}

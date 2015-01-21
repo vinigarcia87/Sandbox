@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	
+	<title>Webshims lib - The capability-based polyfill-loading JS library</title>
+	
+	<link href="./recursos/vendor/webshims/css/styles.css" rel="stylesheet" />
+
+	<script src="./recursos/vendor/jquery/jquery-1.8.2.min.js"></script>
+	<script src="./recursos/vendor/jquery/jquery-ui/js/jquery-ui-1.8.20.custom.min.js"></script>
+	<script src="./recursos/vendor/jquery/jquery-ui/js/jquery.ui.i18n.all.min.js"></script>
+	<script src="./recursos/vendor/modernizr/modernizr.custom.min.js"></script>
+	<script src="./recursos/vendor/webshims/js/polyfiller.js"></script>
+	<script>
+		$.webshims.setOptions('forms', { 
+			customMessages: true 
+		});
+		$.webshims.setOptions({
+			//we do not use any DOM-/JS-APIs on DOM-ready, so we do not need to delay the ready event <- good against fouc
+			waitReady: false
+		});
+		//load all polyfill features
+		$.webshims.polyfill();
+	</script>
+</head>
+<body class="home">
+	<header>
+		<hgroup>
+			<h1>Webshims Lib.</h1>
+			<h2>Polyfill only the incapable browsers</h2>
+		</hgroup>
+		<nav></nav>
+	</header>
+	<div class="main">
+		<section>
+			<form>
+				<input type="date" data-placeholder="Inserir data">
+				<br/>
+				<input list="datalist" type="email" placeholder="Digite seu email">
+				<datalist id="datalist">
+					<select>
+						<option value="yourmail@gmail.com"></option>
+						<option value="yourmail@yahoo.com"></option>
+						<option value="mail@some-example-domain.com"></option>
+						<option value="foo@bar.baz"></option>
+					</select>
+				</datalist>
+				<br/>
+				<input type="number" placeholder="Numbers only">
+				<input placeholder="Amount" onfocus="this.type='number';">
+				<br/>
+			</form>
+		</section>
+	</div>
+	<footer>
+		<small>
+			<strong>Note</strong>: every polyfill is a hack! innovative frontend development is hacky and always will be hacky!
+		</small>
+	</footer>
+</body>
+</html>   
