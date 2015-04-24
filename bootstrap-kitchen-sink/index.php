@@ -9,7 +9,7 @@
    
         <script src="./assets/vendor/jquery/1.10.2/jquery.min.js"></script>  
 
-        <!-- <link href="./assets/vendor/bootstrap/3.3.1/css/bootstrap.min.css"/> -->
+        <!-- <link rel="stylesheet" href="./assets/vendor/bootstrap/3.3.1/css/bootstrap.min.css"/> -->
         <script src="./assets/vendor/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" media="all" href="./assets/vendor/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -17,6 +17,39 @@
 		<!-- Meu estilo -->
 		<link rel="stylesheet" href="./assets/vendor/bootstrap/springtones-lavish-bootstrap/css/bootstrap.min.css"/>
 
+		<style>
+			.responsivo .col-xs-3 .hidden-lg,
+			.responsivo .col-xs-3 .hidden-md,
+			.responsivo .col-xs-3 .hidden-sm,
+			.responsivo .col-xs-3 .hidden-xs {
+				border: 1px solid #ddd;
+				color: #999;
+			}
+			.responsivo span {
+				border-radius: 4px;
+				display: block;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 1.1;
+				padding: 15px 10px;
+				text-align: center;
+			}
+			.palette, .color-swatches { color: #fff; text-align: center; font-weight: bold; }
+			.palette .color:first-child { border-left: 1px solid #28363D; }
+			.palette .color:last-child { border-left: 1px solid #28363D; }
+			.palette .color { border-top: 1px solid #28363D; border-bottom: 1px solid #28363D; float: left; height: 200px; width: 14.28%; }
+			.color-swatch{ height: 100px; width: 100px; border-radius: 3px; float: left; margin: 0 5px; color: #fff; text-align: center; font-weight: bold; }
+			.gray-darker { background-color: #222222; }
+			.gray-dark { background-color: #2f575d; }
+			.gray { background-color: #6d9197; }
+			.gray-light { background-color: #99aead; }
+			.gray-lighter { background-color: #c4cdc1; }
+			.brand-primary { background-color: #658b6f; }
+			.brand-success { background-color: #5cb85c; }
+			.brand-info { background-color: #5bc0de; }
+			.brand-warning { background-color: #f0ad4e; }
+			.brand-danger { background-color: #d9534f; }
+		</style>
 	</head>
 	<body>
 		<div class="navbar navbar-default navbar-static-top">
@@ -71,6 +104,26 @@
 			<p>A quick preview of everything Bootstrap has to offer.</p>
 			<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 		  </div>
+		  
+			<div class="row margin-bottom-row responsivo">
+				<div class="col-xs-3">
+					<span class="hidden-xs">Hidden x-small</span>
+					<span class="visible-xs-block">x-small</span>
+				</div>
+				<div class="col-xs-3">
+					<span class="hidden-sm">Hidden small</span>
+					<span class="visible-sm-block">Small</span>
+				</div>
+				<div class="col-xs-3">
+					<span class="hidden-md">Hidden medium</span>
+					<span class="visible-md-block">Medium</span>
+				</div>
+				<div class="col-xs-3">
+					<span class="hidden-lg">Hidden large</span>
+					<span class="visible-lg-block">Large</span>
+				</div>
+			</div>
+		  
 		  <div class="row">
 			<div class="col-lg-6">
 			  <div class="panel panel-default" id="headings">
@@ -727,23 +780,7 @@
 			  </div>
 			</div>
 		  </div>
-			<style>
-				.palette, .color-swatches { color: #fff; text-align: center; font-weight: bold; }
-				.palette .color:first-child { border-left: 1px solid #28363D; }
-				.palette .color:last-child { border-left: 1px solid #28363D; }
-				.palette .color { border-top: 1px solid #28363D; border-bottom: 1px solid #28363D; float: left; height: 200px; width: 14.28%; }
-				.color-swatch{ height: 100px; width: 100px; border-radius: 3px; float: left; margin: 0 5px; color: #fff; text-align: center; font-weight: bold; }
-				.gray-darker { background-color: #222222; }
-				.gray-dark { background-color: #2f575d; }
-				.gray { background-color: #6d9197; }
-				.gray-light { background-color: #99aead; }
-				.gray-lighter { background-color: #c4cdc1; }
-				.brand-primary { background-color: #658b6f; }
-				.brand-success { background-color: #5cb85c; }
-				.brand-info { background-color: #5bc0de; }
-				.brand-warning { background-color: #f0ad4e; }
-				.brand-danger { background-color: #d9534f; }
-			</style>
+
     <div class="row" style="margin-bottom: 10px;">
         <div class="col-md-6 palette">
             <div class="color" style="background-color: #DEE1DD;">#DEE1DD<br />
