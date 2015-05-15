@@ -1,61 +1,49 @@
-<!DOCTYPE html>
-<html class="" lang="pt-BR">
-    <head>
-	<meta charset="UTF-8" />
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	</head>
-	<body class="">
-		<div class="container">
-			<div class="column-2"></div>
-			<div class="column-1 logo">
-				<img alt="Keila &amp; Vinicius" src="http://localhost/KeilaeVinicius/wp-content/themes/storms-keilaevinicius/assets/img/logo/monograma_105w.png">
-			</div>
-			<div class="column-9"></div>
-		</div>
-	</body>
+<html>
+<head>
 	<style>
 		* {
-			margin: 0;
 			padding: 0;
-		}
-		* {
+			margin: 0;
 			box-sizing: border-box;
 		}
-		*::after, *::before {
-			box-sizing: border-box;
+		html, body {
+			height: 100%;
 		}
 		body {
-			background-color: tomato;
-			background-image: url("http://localhost/KeilaeVinicius/wp-content/themes/storms-keilaevinicius/assets/img/pattern.png"), url("http://localhost/KeilaeVinicius/wp-content/themes/storms-keilaevinicius/assets/img/slide/picture3.jpg");
+			background: url(./fundo.jpg) no-repeat center center fixed;
+			background-size: cover;
 		}
-		[class^='column'] {
-			float: left;
-			height: 100px;
-			background-color: rgba(255, 255, 255, 0.8);		
-		}
-		.column-1 {
-		   width: calc(100% / 12);
-		   height: 150px;
-		   background-color: rgba(255, 255, 255, 0.8);
-		}
-		.column-2 {
-		   width: calc(100% / 12 * 2);
-		   background-color: rgba(255, 255, 255, 0.8);
-		}
-		.column-9 {
-		   width: calc(100% / 12 * 9);
-		   background-color: rgba(255, 255, 255, 0.8);
-		}
-		.container {
-			height: 100px;
+		header {
 			width: 100%;
+			height: 100px;
+			background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 50%);
+			background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 50%);
+			background-image: -o-linear-gradient(rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 50%);
+			background-image: -ms-linear-gradient(rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 50%);
+			background-image: linear-gradient(rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 50%);
+			background-image: filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
 		}
-		.logo {
-			height: 150px;
-			padding: 5px 0;
-			text-align: center;
-			border-radius: 0 0 15px 15px;
+		.img {
+			margin: 0 auto;
+			width: 150px;
+			height: 120px;
+			background-image: -moz-linear-gradient(rgba(255, 255, 255, 0) calc(50% + (100px / 2 - 50%)), rgba(255, 255, 255, 0.8) calc(50% + (100px / 2 - 50%)));
+			background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0) calc(50% + (100px / 2 - 50%)), rgba(255, 255, 255, 0.8) calc(50% + (100px / 2 - 50%)));
+			background-image: -o-linear-gradient(rgba(255, 255, 255, 0) calc(50% + (100px / 2 - 50%)), rgba(255, 255, 255, 0.8) calc(50% + (100px / 2 - 50%)));
+			background-image: -ms-linear-gradient(rgba(255, 255, 255, 0) calc(50% + (100px / 2 - 50%)), rgba(255, 255, 255, 0.8) calc(50% + (100px / 2 - 50%)));
+			background-image: linear-gradient(rgba(255, 255, 255, 0) calc(50% + (100px / 2 - 50%)), rgba(255, 255, 255, 0.8) calc(50% + (100px / 2 - 50%)));
+			background-image: filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
 		}
 	</style>
+</head>
+<body>
+	<header>
+		<div class="img">
+			
+		</div>
+	</header>
+	<p>
+
+	</p>
+</body>
 </html>
