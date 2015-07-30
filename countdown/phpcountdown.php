@@ -14,7 +14,7 @@
 			// Noivado   09 November 2013 17:00:00;
 			// Casamento 03 October 2015 17:00:00;
 
-			/* Set start and end dates */	
+			/* Set start and end dates */
 			$nowDate = new DateTime();
 			$startDate = new DateTime('2013-11-09 17:00:00');
 			$endDate = new DateTime('2015-10-03 17:00:00');

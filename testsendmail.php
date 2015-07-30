@@ -22,7 +22,7 @@ sendmail_path = "C:\wamp\sendmail\sendmail.exe -t"
 </li>
 </ul>
 <?php
-$to      = 'vinigarcia87@yahoo.com.br';
+$to      = 'vinigarcia87@gmail.com';
 $subject = 'Fake sendmail test';
 $message = 'If we can read this, it means that our fake Sendmail setup works!';
 $headers = 'From: vinicius.garcia@storms.com.br' . "\r\n" .
