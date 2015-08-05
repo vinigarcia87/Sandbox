@@ -3,4 +3,7 @@ src/.sass-cache/*
 src/node_modules/*
 src/.ftppass
 src/tmp/*
-
+src2/.sass-cache/*
+src2/node_modules/*
+src2/.ftppass
+src2/tmp/*
