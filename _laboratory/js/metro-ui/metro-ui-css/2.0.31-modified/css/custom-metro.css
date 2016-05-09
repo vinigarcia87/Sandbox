@@ -1,0 +1,142 @@
+/**
+ * Arquivo que customiza o site com tipografia METRO UI mais adequada.
+ * Estilos apresentados aqui sao identicos aos do metro-ui.css, mas foi retirado
+ * o namespace metro. Somente algumas definiçoes estao aqui.
+ *
+ * Author: Vinicius Garcia
+ * Date: 2014-06-27 01h40
+ */
+
+@font-face {
+	font-family: "PT Serif Caption";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Cambria"), local("PT Serif Caption"), local("PTSerif-Caption"), url(https://themes.googleusercontent.com/static/fonts/ptserifcaption/v4/7xkFOeTxxO1GMC1suOUYWWhBabBbEjGd1iRmpyoZukE.woff) format('woff');
+}
+@font-face {
+	font-family: "Open Sans Light";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Segoe UI Light"), local("Open Sans Light"), local("OpenSans-Light"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Segoe UI"), local("Open Sans"), local("OpenSans"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+	font-family: "Open Sans Bold";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Segoe UI Bold"), local("Open Sans Bold"), local("OpenSans-Bold"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000000;
+    font-family: 'Segoe UI Light_','Open Sans Light',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 4.8rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 4.8rem;
+}
+h2 {
+    color: #000000;
+    font-family: 'Segoe UI Light_','Open Sans Light',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 2.5rem;
+}
+h3 {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Segoe UI Light_','Open Sans Light',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    line-height: 2.2rem;
+}
+h4 {
+    color: #000000;
+    font-family: 'Segoe UI Semibold_','Open Sans Bold',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    line-height: 1.6rem;
+}
+h5 {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Segoe UI Semibold_','Open Sans Bold',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    line-height: 1.4rem;
+}
+h6 {
+    color: #000000;
+    font-family: 'Segoe UI_','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 9pt;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    line-height: 15pt;
+}
+div, span, p {
+    font-family: 'Segoe UI_','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+p {
+    color: #000000;
+    font-family: 'Segoe UI_','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    line-height: 15pt;
+    margin: 0 0 7pt;
+}
+strong {
+    font-family: 'Segoe UI Semibold_','Open Sans Bold',Verdana,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+}
+address {
+    font-family: 'Segoe UI_','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 7pt;
+}
+blockquote {
+    border-left: 4px solid #999999;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+blockquote small:before {
+    content: "— ";
+}
+blockquote small {
+    color: #999999;
+}
+blockquote.place-right {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #999999 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: none solid none none;
+    border-width: 0 4px 0 0;
+    padding-right: 10px;
+    text-align: right;
+}
+.place-right {
+    float: right;
+}
+dl dt {
+    font-family: 'Segoe UI Semibold_','Open Sans Bold',Verdana,Arial,Helvetica,sans-serif;
+}

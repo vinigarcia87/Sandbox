@@ -1,0 +1,122 @@
+// Codigo para controle de multiplas modais oriundo da fonte abaixo
+// Fonte: http://miles-by-motorcycle.com/static/bootstrap-modal/index.html
+$(document).ready(function () {
+    if ($.isFunction($.fn.modal))
+        $(document)
+            // Going to show
+            .on('show.bs.modal', '.modal', function (event) {
+                var modal = $(this); // The actual modal
+                var button = $(event.relatedTarget); // Button that triggered the modal
+
+                // Fix para a posiçao da modal
+                if ($(document).height() > $(window).height())
+                    $('body').addClass('modal-open-noscroll'); // no-scroll
+                else
+                    $('body').removeClass('modal-open-noscroll');
+
+                // Colocamos as modais no final do main-page-form
+                modal.appendTo(".main-page-form");
+                // Fonte: http://stackoverflow.com/questions/29837294/jquery-appendto-bug/29837354#29837354
+                event.stopPropagation(); // stop the event from bubbling further up
+            })
+            // Is visible already
+            .on('shown.bs.modal', '.modal', function (event) {
+                var modal = $(this); // The actual modal
+                var button = $(event.relatedTarget); // Button that triggered the modal
+
+                // Fix para a posiçao da modal
+                if ($('body').hasClass('modal-open-noscroll'))
+                    $('body').css('padding-right', '17px'); // Veja: http://davidwalsh.name/detect-scrollbar-width
+
+                // Keep track of the number of open modals
+                if (typeof ($('body').data('fv_open_modals')) == 'undefined')
+                    $('body').data('fv_open_modals', 0);
+
+                // if the z-index of this modal has been set, ignore.
+                if ($(this).hasClass('fv-modal-stack'))
+                    return;
+                $(this).addClass('fv-modal-stack');
+                // Increment the number of opened modals
+                $('body').data('fv_open_modals', $('body').data('fv_open_modals') + 1);
+
+
+                // Ajuste de tela quando a tab Documentos abrir - Usado pelo Splitter
+                if ($('.pdf-viewer-splitter', modal).exists()) {
+                    $('.pdf-viewer-splitter', modal).trigger('resize');
+                }
+            })
+            // Going to hide
+            .on('hide.bs.modal', '.modal', function (event) {
+                var modal = $(this); // The actual modal
+                var button = $(event.relatedTarget); // Button that triggered the modal
+
+                // Colocamos as modais no seus locais originais
+                $('#' + modal.id() + '_modalplaceholder').after(modal);
+            })
+            // Is hidden already
+            .on('hidden.bs.modal', '.modal', function (event) {
+                var modal = $(this); // The actual modal
+                var button = $(event.relatedTarget); // Button that triggered the modal
+
+                modal.removeClass('fv-modal-stack');
+                // Decrement the number of opened modals
+                $('body').data('fv_open_modals', $('body').data('fv_open_modals') - 1);
+
+                // If exists a opened modal
+                if ($('body').data('fv_open_modals') > 0) {
+                    if (!$('body').hasClass('modal-open')) {
+                        $('body').addClass('modal-open');
+
+                        // Fix para a posiçao da modal
+                        if ($('body').hasClass('modal-open-noscroll'))
+                            $('body').css('padding-right', '17px'); // Veja: http://davidwalsh.name/detect-scrollbar-width
+                    }
+                } else {
+                    // Fix para a posiçao da modal
+                    $('body').removeClass('modal-open-noscroll');
+                }
+            });
+});
+
+/**
+ * Dropdown de Painel de Controle
+ * Esta dropdown nao fecha quando seu conteudo eh clicado, ao 
+ * contrario das Dropdowns normais do Bootstrap
+ * Fonte: http://stackoverflow.com/a/25196101/1003020
+ */
+$(function () {
+    if ($('li.dropdown.menu-dashboard').exists()) {
+        $('li.dropdown.menu-dashboard a').on('click', function (event) {
+            $(this).parent().toggleClass('open');
+        });
+        $('body').on('click', function (e) {
+            if (!$('li.dropdown.menu-dashboard').is(e.target)
+                && $('li.dropdown.menu-dashboard').has(e.target).length === 0
+                && $('.open').has(e.target).length === 0
+            ) {
+                $('li.dropdown.menu-dashboard').removeClass('open');
+            }
+        });
+    }
+});
+
+/**
+ * Calcula posição esq/dir do menu principal
+ * Se um menu vai estrapolar a largura da tela a direita, abre o menu na esquerda
+ */
+$(function () {
+    $('.menu-principal ul.dropdown-menu [data-toggle=dropdown]').on('mouseover', function (event) {
+        var menu = $(this).parent().find('ul:first');
+        if (!menu.hasClass('calculated')) {
+            var menupos = menu.offset();
+            if ((menupos.left + menu.width()) + 30 > $(window).width()) {
+                var newpos = -menu.width();
+            } else {
+                var newpos = $(this).parent().width();
+            }
+            menu.css({ left: newpos });
+            menu.addClass('calculated');
+        }
+    });
+});
+
